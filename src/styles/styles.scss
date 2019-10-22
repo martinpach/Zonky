@@ -1,0 +1,15 @@
+@import 'general';
+@import 'variables';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Open Sans Condensed", sans-serif; }
+
+a {
+  color: $turquoise;
+  text-decoration: none;
+  transition: color .5s;
+
+  &:hover {
+    color: lighten($color: $turquoise, $amount: 10);
+  }
+}

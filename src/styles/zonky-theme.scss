@@ -1,0 +1,75 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$turquoise: (
+  50 : #e7f6f7,
+    100 : #c3e9ec,
+    200 : #9bdadf,
+    300 : #73cbd2,
+    400 : #55bfc8,
+    500 : #37b4be,
+    600 : #31adb8,
+    700 : #2aa4af,
+    800 : #239ca7,
+    900 : #168c99,
+    A100 : #cefaff,
+    A200 : #9bf4ff,
+    A400 : #68efff,
+    A700 : #4eecff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$orange: (
+  50 : #fcebe7,
+    100 : #f8ccc3,
+    200 : #f3ab9b,
+    300 : #ee8973,
+    400 : #eb6f55,
+    500 : #e75637,
+    600 : #e44f31,
+    700 : #e0452a,
+    800 : #dd3c23,
+    900 : #d72b16,
+    A100 : #ffffff,
+    A200 : #ffd8d4,
+    A400 : #ffaaa1,
+    A700 : #ff9388,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$zonky-palette-primary: mat-palette($turquoise);
+$zonky-palette-accent:  mat-palette($orange);
+
+$zonky-theme: mat-light-theme($zonky-palette-primary, $zonky-palette-accent);
+
+@include angular-material-theme($zonky-theme);

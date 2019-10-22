@@ -1,0 +1,12 @@
+@import 'variables';
+
+header {
+  height: $header-height;
+  img {
+    height: 4rem;
+  }
+}
+
+main {
+  height: calc(100% - #{$header-height});
+}

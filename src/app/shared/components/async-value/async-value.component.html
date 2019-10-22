@@ -1,0 +1,5 @@
+<ng-content *ngIf="!loading; else progressBar"></ng-content>
+
+<ng-template #progressBar>
+  <mat-progress-bar color="primary" mode="indeterminate"></mat-progress-bar>
+</ng-template>

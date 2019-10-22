@@ -1,0 +1,15 @@
+<h1 class="text-center">
+  <a href="https://app.zonky.cz" target="blank">ZONKY.CZ</a> AVERAGE AMOUNT OF LOANS</h1>
+<mat-form-field>
+  <mat-label>Select rating</mat-label>
+  <mat-select (selectionChange)="ratingChange.emit($event.value)">
+    <mat-option *ngFor="let rating of ratings" [value]="rating">
+      {{rating}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<h1 class="avg">
+  <app-async-value [loading]="avgLoading">
+    {{loanAmountsAvg ? (loanAmountsAvg | amount) : ''}}
+  </app-async-value>
+</h1>
