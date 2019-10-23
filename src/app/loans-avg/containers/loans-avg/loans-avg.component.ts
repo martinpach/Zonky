@@ -26,8 +26,7 @@ export class LoansAvgComponent implements OnInit {
   onRatingChange(rating: string) {
     this.avgLoading = true;
     this.loanAmountsAvg$ = this.loansService.getAllLoanAmountsByRating(rating).pipe(
-      filter(amounts => amounts && amounts.length > 0),
-      map(amounts => amounts.reduce((acc, curr) => acc += curr.amount, 0) / amounts.length),
+      map(amounts => (amounts && amounts.length > 0) ? (amounts.reduce((acc, curr) => acc += curr.amount, 0) / amounts.length) : 0),
       catchError(e => {
         this.snackBar.open('Something went wrong! Try again later.', null, {
           duration: 3000

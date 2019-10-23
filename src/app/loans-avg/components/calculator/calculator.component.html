@@ -10,6 +10,6 @@
 </mat-form-field>
 <h1 class="avg">
   <app-async-value [loading]="avgLoading">
-    {{loanAmountsAvg ? (loanAmountsAvg | amount) : ''}}
+    {{(loanAmountsAvg || loanAmountsAvg === 0) ? (loanAmountsAvg | amount) : ''}}
   </app-async-value>
 </h1>
